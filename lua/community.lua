@@ -8,4 +8,10 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
+  { import = "astrocommunity.colorscheme.neofusion-nvim" },
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.test.neotest" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.kanagawa-nvim" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
 }

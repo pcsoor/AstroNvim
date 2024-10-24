@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -32,13 +30,16 @@ return {
         number = true,         -- sets vim.opt.number
         spell = false,         -- sets vim.opt.spell
         signcolumn = "yes",    -- sets vim.opt.signcolumn to yes
-        wrap = false,          -- sets vim.opt.wrap
+        wrap = true,           -- sets vim.opt.wrap
         cmdheight = 0,
+        conceallevel = 1,
+        colorcolumn = "80",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+        conceallevel = 2,
       },
     },
     -- Mappings can be configured through AstroCore as well.
@@ -61,7 +62,6 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
-
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },

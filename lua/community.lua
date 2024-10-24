@@ -12,7 +12,8 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.kanagawa-nvim" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.git.blame-nvim" },
+  { import = "astrocommunity.colorscheme.rose-pine" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.colorscheme.lackluster-nvim" },
 }

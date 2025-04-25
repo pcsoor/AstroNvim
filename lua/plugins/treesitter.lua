@@ -5,15 +5,19 @@ return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
     ensure_installed = {
-      "lua",
-      "vim",
+      -- "lua",
+      -- "vim",
       "typescript",
       "tsx",
       -- add more arguments for adding more treesitter parsers
     },
     highlight = {
       enable = true,
+      additional_vim_regex_highlighting = true,
     },
-    indent = { enable = true },
+    indent = {
+      disable = true,
+      enable = false,
+    },
   },
 }

@@ -12,7 +12,12 @@ vim.opt.textwidth = 0
 vim.opt.wrapmargin = 0
 vim.opt.wrap = true
 vim.opt.linebreak = true
+vim.opt.smartindent = false
+vim.opt.swapfile = false
 
+-- mappings
+vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 -- validate that lazy is available
 if not pcall(require, "lazy") then
   -- stylua: ignore
@@ -24,14 +29,15 @@ if not pcall(require, "lazy") then
 end
 
 -- Create an autocmd group (optional but good practice)
-vim.api.nvim_create_augroup("TSOrganizeImports", { clear = true })
+-- vim.api.nvim_create_augroup("TSOrganizeImports", { clear = true })
 
 -- Set the autocmd for organizing imports on save
-vim.api.nvim_create_autocmd("BufWritePre", {
-  group = "TSOrganizeImports",
-  pattern = { "*.ts", "*.tsx" }, -- Set file types for which the command should run
-  callback = function() vim.cmd "TSToolsOrganizeImports" end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+-- group = "TSOrganizeImports",
+-- pattern = { "*.ts", "*.tsx" }, -- Set file types for which the command should run
+-- callback = function() vim.cmd "TSToolsOrganizeImports" end,
+-- })
 
 require "lazy_setup"
+require("bufferline").setup{}
 require "polish"
